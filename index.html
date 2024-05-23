@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MER photos</title>
+    <link rel="shortcut icon" href="img/mer_logo_favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <!--<script src="script.js"></script>-->
+    <script type="module" src="./scripts/module.js"></script>
+</head>
+
+<body onload="currentContent('pictures')">
+    <header id="header">
+        <div class="headercontainer">
+            <div class="logo">
+                <img onclick="burgerButtonWasClicked()" id="burgermenu" class="burgermenu"
+                    src="img/menu_lines_hamburger_icon.png" alt="">
+                <img src="img/mer_logo.png" alt="" onclick="document.location.reload()">
+                <div id="headlineId" class="headline" onclick="document.location.reload()">photos</div>
+            </div>
+
+        </div>
+        <div class="divider"></div>
+    </header>
+    <aside id="aside">
+        <div id="sidebar" class="sidebar">
+            <div class="topLeft">
+                <div id="picturesId" onclick="currentContent('pictures')" class="pictures">
+                    <img id="picturesImgId" class="picturesImg" src="img/bild.png" alt="">
+                    <p class="picturesParagraph" id="picturesParagraphId">Fotos</p>
+                </div>
+                <div class="language">
+                    <img onclick="switchLanguage()" id="languageImgId" class="languageImg" src="img/deutsche.png"
+                        alt="">
+                    <select class="selectBox" id="selectLanguageId" onchange="changeLanguage()">
+                        <option value="1">German</option>
+                        <option value="2" selected="selected">English</option>
+                    </select>
+                </div>
+            </div>
+            <div class="bottomLeft">
+                <div id="imprintId" onclick="currentContent('imprint')" class="imprint">
+                    <img id="imprintImgId" class="imprintImg" src="img/info.png" alt="">
+                    <p class="imprintParagraph" id="imprintParagraphId">Impressum</p>
+                </div>
+                <div id="dataprotectionId" onclick="currentContent('dataprotection')" class="dataprotection">
+                    <img id="dataprotectionImgId" class="dataprotectionImg" src="img/datenschutz-bestimmungen.png"
+                        alt="">
+                    <p class="dataprotectionParagraph" id="dataprotectionParagraphId">Datenschutz</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <main id="main" w3-include-html="templates/pictures.html" onclick="isMenuOpenOnSmallScreenSize()"></main>
+</body>
+
+</html>
